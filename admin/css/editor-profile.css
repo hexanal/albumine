@@ -1,0 +1,33 @@
+/*
+ * Wordpress Admin Panel - Custom Styles
+ * —————————————————————————————————————
+ * For user profile: editor
+ */
+
+/*
+ * Don't bother Editors with Update Nag
+ */
+.update-nag {
+  display: none;
+}
+
+/*
+ * Don't touch that Slug div
+ */
+#slugdiv {
+  display: none;
+}
+
+/*
+ * Basic Users cannot modify options that appear on the screen
+ */
+#screen-options-link-wrap {
+  display: none;
+}
+
+/*
+ * Hide WPML Metabox
+ */
+#icl_div_config {
+  display: none;
+}
