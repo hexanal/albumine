@@ -1,0 +1,13 @@
+.DS_Store
+.env
+
+node_modules/
+npm-debug.log
+
+*.css.map
+*.js.map
+
+# Ignore those files because I'm working on that at the moment...
+*.bak.*
+*.bak
+_bak
