@@ -1,13 +1,9 @@
-# HX
+# Albumine
 
-Just a barebone Wordpress theme that helps with the customizing of the Adminstration panel.
+A quick project to see if I can build something that hosts photo albums I want to make "semi-public".
 
-This is to be used for the backend only; the Wordpress content generated will be consumed from a separate codebase, via the WP REST API.
+## why?
 
-This theme expects the Advanced Custom Field plugin to be installed on the Wordpress instance.
-
-## Roadmap
-
-* Create interface to expand the API
-* Use this expansion of the API to allow registering/logging in via the API
-* Allow fetching of custom post metadata via the API
+- don't want to use Google's shit, or Apple's, or Amazon's shit: I want my own shit
+- I want to share stuff and figure out who sees what, when: I'M THE ONE WHO TRACKS
+- I get to design something, I get to test Wordpress' Gutenberg thing, finally... I'm way behind
