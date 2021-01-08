@@ -1,0 +1,229 @@
+/**
+ * These are the utility classes, and their combinations
+
+- container
+  - container flush
+  - container narrow
+  - container wide
+- row
+- col
+- col-1, col-2, ...
+- col-xs-1, col-sm-1, ...
+- spacing
+- spacing-1, spacing-2
+- spacing-top
+
+- grid
+  - grid grid-2
+  - grid grid-3
+  - grid grid-4
+  - grid grid-5
+  - grid grid-6
+  - grid grid-7
+
+*/
+
+.container {
+  max-width: var(--max-width);
+  padding-left: var(--margins);
+  padding-right: var(--margins);
+  margin-left: auto;
+  margin-right: auto;
+
+  &.flush {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.narrow {
+    max-width: var(--narrow-width);
+  }
+  &.wide {
+    max-width: var(--wide-width);
+  }
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  grid-gap: var(--gutters);
+}
+
+.grid { display: grid; grid-gap: var(--gutters); }
+.grid-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+.grid-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+.grid-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+.grid-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+.grid-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+.grid-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+.grid-12 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+
+@media (min-width: $mq-xs) {
+  .grid-xs-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+  .grid-xs-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+  .grid-xs-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-xs-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .grid-xs-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .grid-xs-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+}
+
+@media (min-width: $mq-sm) {
+  .grid-sm-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+  .grid-sm-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+  .grid-sm-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-sm-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .grid-sm-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .grid-sm-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+}
+
+@media (min-width: $mq-md) {
+  .grid-md-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+  .grid-md-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+  .grid-md-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-md-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .grid-md-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .grid-md-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+}
+
+@media (min-width: $mq-lg) {
+  .grid-lg-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+  .grid-lg-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+  .grid-lg-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-lg-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .grid-lg-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .grid-lg-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+}
+
+@media (min-width: $mq-xl) {
+  .grid-xl-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+  .grid-xl-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+  .grid-xl-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-xl-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .grid-xl-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .grid-xl-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+}
+
+@media (min-width: $mq-xxl) {
+  .grid-xxl-2 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr; }
+  .grid-xxl-3 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr; }
+  .grid-xxl-4 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .grid-xxl-5 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .grid-xxl-6 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .grid-xxl-7 { display: grid; grid-gap: var(--gutters); grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+}
+
+.no-gutters {
+  --gutters: 0;
+}
+
+/* Declinations: did we need Sass mixins here? hells no */
+
+.col-1 { width: $col-1; }
+.col-2 { width: $col-2; }
+.col-3 { width: $col-3; }
+.col-4 { width: $col-4; }
+.col-5 { width: $col-5; }
+.col-6 { width: $col-6; }
+.col-7 { width: $col-7; }
+.col-8 { width: $col-8; }
+.col-9 { width: $col-9; }
+.col-10 { width: $col-10; }
+.col-11 { width: $col-11; }
+.col, .col-12 { width: $col-12; }
+
+@media (min-width: $mq-xs) {
+  .col-xs-1 { width: $col-1; }
+  .col-xs-2 { width: $col-2; }
+  .col-xs-3 { width: $col-3; }
+  .col-xs-4 { width: $col-4; }
+  .col-xs-5 { width: $col-5; }
+  .col-xs-6 { width: $col-6; }
+  .col-xs-7 { width: $col-7; }
+  .col-xs-8 { width: $col-8; }
+  .col-xs-9 { width: $col-9; }
+  .col-xs-10 { width: $col-10; }
+  .col-xs-11 { width: $col-11; }
+}
+@media (min-width: $mq-sm) {
+  .col-sm-1 { width: $col-1; }
+  .col-sm-2 { width: $col-2; }
+  .col-sm-3 { width: $col-3; }
+  .col-sm-4 { width: $col-4; }
+  .col-sm-5 { width: $col-5; }
+  .col-sm-6 { width: $col-6; }
+  .col-sm-7 { width: $col-7; }
+  .col-sm-8 { width: $col-8; }
+  .col-sm-9 { width: $col-9; }
+  .col-sm-10 { width: $col-10; }
+  .col-sm-11 { width: $col-11; }
+}
+@media (min-width: $mq-md) {
+  .col-md-1 { width: $col-1; }
+  .col-md-2 { width: $col-2; }
+  .col-md-3 { width: $col-3; }
+  .col-md-4 { width: $col-4; }
+  .col-md-5 { width: $col-5; }
+  .col-md-6 { width: $col-6; }
+  .col-md-7 { width: $col-7; }
+  .col-md-8 { width: $col-8; }
+  .col-md-9 { width: $col-9; }
+  .col-md-10 { width: $col-10; }
+  .col-md-11 { width: $col-11; }
+}
+@media (min-width: $mq-lg) {
+  .col-lg-1 { width: $col-1; }
+  .col-lg-2 { width: $col-2; }
+  .col-lg-3 { width: $col-3; }
+  .col-lg-4 { width: $col-4; }
+  .col-lg-5 { width: $col-5; }
+  .col-lg-6 { width: $col-6; }
+  .col-lg-7 { width: $col-7; }
+  .col-lg-8 { width: $col-8; }
+  .col-lg-9 { width: $col-9; }
+  .col-lg-10 { width: $col-10; }
+  .col-lg-11 { width: $col-11; }
+}
+@media (min-width: $mq-xl) {
+  .col-xl-1 { width: $col-1; }
+  .col-xl-2 { width: $col-2; }
+  .col-xl-3 { width: $col-3; }
+  .col-xl-4 { width: $col-4; }
+  .col-xl-5 { width: $col-5; }
+  .col-xl-6 { width: $col-6; }
+  .col-xl-7 { width: $col-7; }
+  .col-xl-8 { width: $col-8; }
+  .col-xl-9 { width: $col-9; }
+  .col-xl-10 { width: $col-10; }
+  .col-xl-11 { width: $col-11; }
+}
+
+/* Vertical rhythm */
+$spacing: var(--spacing);
+$spacing-2: calc( var(--spacing) * 2);
+$spacing-3: calc( var(--spacing) * 3);
+$spacing-4: calc( var(--spacing) * 4);
+
+.spacing {
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+}
+.spacing-2 {
+  margin-top: $spacing-2;
+  margin-bottom: $spacing-2;
+}
+.spacing-3 {
+  margin-top: $spacing-3;
+  margin-bottom: $spacing-3;
+}
+.spacing-4 {
+  margin-top: $spacing-4;
+  margin-bottom: $spacing-4;
+}
+.spacing-top { margin-top: $spacing; }
+.spacing-bottom { margin-bottom: $spacing; }
+.spacing-top-2 { margin-top: $spacing-2; }
+.spacing-bottom-2 { margin-bottom: $spacing-2; }
+.spacing-top-3 { margin-top: $spacing-3; }
+.spacing-bottom-3 { margin-bottom: $spacing-3; }
+.spacing-top-4 { margin-top: $spacing-4; }
+.spacing-bottom-4 { margin-bottom: $spacing-4; }

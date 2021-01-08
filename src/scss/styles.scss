@@ -1,0 +1,29 @@
+@import 'grigri/grigri';
+@import 'grigri/grigri.classes';
+// @import 'grigri/grigri.helpers';
+@import 'mixins/general';
+@import 'content';
+
+:root {
+  --font-body: "Helvetica Neue", Helvetica, sans-serif;
+  --color-body: #313131;
+  --color-active: #FAB926;
+  --color-subtle: #49A57B;
+  --color-bright: #EC464A;
+  --color-midnight: #658CEE;
+  --color-flash: #C3AEF2;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-body);
+  background-color: #fafbfc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  @include no-user-select;
+}

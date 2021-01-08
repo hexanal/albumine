@@ -1,0 +1,69 @@
+/* The infamous "breakpoints" */
+
+$mq-xs: 500px;
+$mq-sm: 700px;
+$mq-md: 1000px;
+$mq-lg: 1200px;
+$mq-xl: 1440px;
+$mq-xxl: 1920px;
+
+/* Some variables to set the stage */
+
+:root {
+  --max-width: 1200px;
+  --narrow-width: 800px;
+  --wide-width: 1680px;
+
+  --margins: 1rem;
+  --gutters: 0.75rem;
+  --spacing: 3.5rem;
+
+  --col-width: calc( (100% - (var(--gutters) * 11) ) / 12);
+
+  --helper-cols-color: hotpink;
+  --helper-lines-color: magenta;
+  --helper-spacing-color: orangered;
+  --helper-margin-color: lime;
+  --helper-opacity: 0.5;
+
+  @media (min-width: $mq-sm) {
+    --margins: 2rem;
+    --gutters: 1rem;
+  }
+
+  @media (min-width: $mq-xl) {
+    --margins: 4rem;
+    --gutters: 1.5rem;
+  }
+}
+
+
+/* A handful of mixins */
+
+@function grigri-width($number-of-columns) {
+  @return calc(var(--col-width) * #{$number-of-columns} + ( #{$number-of-columns - 1} * var(--gutters) ) );
+}
+
+@mixin grigri-width-cols($number-of-columns) {
+  width: grigri-width($number-of-columns);
+}
+
+
+/* A bunch of variables to set widths */
+
+$col-half: grigri-width(6);
+$col-third: grigri-width(4);
+$col-quarter: grigri-width(3);
+
+$col-1: grigri-width(1);
+$col-2: grigri-width(2);
+$col-3: grigri-width(3);
+$col-4: grigri-width(4);
+$col-5: grigri-width(5);
+$col-6: grigri-width(6);
+$col-7: grigri-width(7);
+$col-8: grigri-width(8);
+$col-9: grigri-width(9);
+$col-10: grigri-width(10);
+$col-11: grigri-width(11);
+$col-12: grigri-width(12);

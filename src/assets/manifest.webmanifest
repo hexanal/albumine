@@ -1,0 +1,13 @@
+{
+  "name": "Fred Mercy",
+  "short_name": "Fred Mercy's Website",
+  "start_url": "../",
+  "display": "standalone",
+  "background_color": "#f9eaea",
+  "description": "My Personal Website",
+  "icons": [{
+    "src": "./images/favicon-big.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }]
+}
